@@ -5,11 +5,11 @@ namespace PHPJuice\Slopeone\Exceptions;
 use RuntimeException;
 
 /**
- * ValueNotFoundException Class.
+ * Slope One Exception.
  *
- * @package    PHPJuice\Slopeone\
+ * @package    PHPJuice\Slopeone
  * @author     ElHaouari Mohammed <dzstormers@gmail.com>
- * @link
+ * @link       https://github.com/PHPJuice/slopeone
  * @license    MIT
  */
 class SlopeoneException extends RuntimeException

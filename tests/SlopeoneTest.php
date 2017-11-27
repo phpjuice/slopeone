@@ -2,13 +2,14 @@
 
 namespace PHPJuice\Slopeone\Tests;
 
-use PHPJuice\Slopeone\Slopeone;
+use PHPJuice\Slopeone\Algorithm;
 use PHPUnit\Framework\TestCase as TestCase;
 
 class SlopeoneTest extends TestCase
 {
-    public function testGetMethod()
+    public function testShouldConstructSlopeone()
     {
-        $this->assertTrue(true, true);
+        $slopeone = new Algorithm();
+        $this->assertTrue(true, $slopeone instanceof Algorithm);
     }
 }
