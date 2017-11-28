@@ -4,6 +4,9 @@ PHP implementation of the Weighted Slope One rating-based collaborative filterin
 
 ## Build status
 [![Build Status](https://travis-ci.org/PHPJuice/slopeone.svg?branch=master)](https://travis-ci.org/PHPJuice/slopeone)
+[![GitHub issues](https://img.shields.io/github/issues/PHPJuice/slopeone.svg)](https://github.com/PHPJuice/slopeone/issues)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/PHPJuice/slopeone.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FPHPJuice%2Fslopeone)
+
 
 ## Requirements
 Slopeone Package requires PHP 5.6+
@@ -135,5 +138,4 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
