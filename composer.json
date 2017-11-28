@@ -1,32 +1,32 @@
 {
-    "name": "phpjuice/slopeone",
-    "type": "library",
-    "description": "php implementation for the weighted slope one predictor algorithm",
-    "keywords": ["recommendation","recommender","collaborative filtering","weighted slope one"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "EL-Haouari Mohammed",
-            "email": "dzstormers@gmail.com"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/PHPJuice/slopeone/issues",
-        "source": "https://github.com/PHPJuice/slopeone"
-    },
-    "require": {
-        "php": ">=5.6"
-    },
-    "autoload": {
-        "psr-4": { "PHPJuice\\Slopeone\\": "src" }
-    },
-    "autoload-dev": {
-        "psr-4": { "PHPJuice\\Slopeone\\Tests\\": "test" }
-    },
-    "scripts": {
-        "test": "./vendor/bin/phpunit --configuration phpunit.xml.dist"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "5.7"
-    }
+  "name": "phpjuice/slopeone",
+  "type": "library",
+  "description": "PHP implementation of the Weighted Slope One rating-based collaborative filtering scheme.",
+  "keywords": ["recommendation","recommender","collaborative filtering","weighted slope one"],
+  "license": "MIT",
+  "authors": [
+      {
+        "name": "EL-Haouari Mohammed",
+        "email": "dzstormers@gmail.com"
+      }
+  ],
+  "support": {
+    "issues": "https://github.com/PHPJuice/slopeone/issues",
+    "source": "https://github.com/PHPJuice/slopeone"
+  },
+  "require": {
+    "php": ">=5.6"
+  },
+  "autoload": {
+    "psr-4": { "PHPJuice\\Slopeone\\": "src" }
+  },
+  "autoload-dev": {
+    "psr-4": { "PHPJuice\\Slopeone\\Tests\\": "test" }
+  },
+  "scripts": {
+    "test": "./vendor/bin/phpunit --configuration phpunit.xml.dist"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.7"
+  }
 }
