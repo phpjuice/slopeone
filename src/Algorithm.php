@@ -17,13 +17,13 @@ class Algorithm implements \PHPJuice\Slopeone\Contracts\Slopeone
    * $diffs Differential ratings matrix.
    * @var Array
    */
-  private $diffs;
+  protected $diffs;
 
   /**
    * $freqs Ratings count matrix.
    * @var Array
    */
-  private $freqs;
+  protected $freqs;
 
   /**
    * Reset the instance.
