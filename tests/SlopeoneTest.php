@@ -5,10 +5,13 @@ namespace PHPJuice\Slopeone\Tests;
 use PHPJuice\Slopeone\Algorithm;
 use PHPUnit\Framework\TestCase as TestCase;
 
-class SlopeoneTest extends TestCase
-{
-    public function testShouldReturnValideSlopeonePrediction()
-    {
+class SlopeoneTest extends TestCase {
+    public function testClear() {
+        $slopeone = new Algorithm();
+        $this->assertNull($slopeone->clear());
+    }
+
+    public function testShouldReturnValideSlopeonePrediction() {
         $slopeone = new Algorithm();
 
         $testData =[
@@ -36,7 +39,7 @@ class SlopeoneTest extends TestCase
         ];
 
         foreach ($testData as $user => $userPrefs) {
-          $slopeone->add($userPrefs);
+            $slopeone->add($userPrefs);
         }
 
         $results = $slopeone->predict([

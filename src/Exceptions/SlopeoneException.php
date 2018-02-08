@@ -12,7 +12,5 @@ use RuntimeException;
  * @link       https://github.com/PHPJuice/slopeone
  * @license    MIT
  */
-class SlopeoneException extends RuntimeException
-{
-
+class SlopeoneException extends RuntimeException {
 }
