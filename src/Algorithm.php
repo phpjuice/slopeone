@@ -35,6 +35,7 @@ class Algorithm implements \PHPJuice\Slopeone\Contracts\Slopeone {
     /**
      * Update matrices with user preference data, accepts an Array.
      * @param array $userPrefs user preference data
+     * @return Algorithm
      */
     public function add($userPrefs) {
         foreach ($userPrefs as $item => $rating) {
@@ -69,7 +70,6 @@ class Algorithm implements \PHPJuice\Slopeone\Contracts\Slopeone {
     public function predict($userPrefs) {
         // Calculate Diffs Matrix
         $this->calculateDiffsMatrix();
-        $freq = 1;
         $preds= [];
         $freqs= [];
         $results = [];
@@ -102,7 +102,6 @@ class Algorithm implements \PHPJuice\Slopeone\Contracts\Slopeone {
             }
         }
 
-        var_dump($freqs);
         foreach ($preds as $item => $rating) {
             if (isset($data[$item]) && $freqs[$item] > 0) {
                 continue;
