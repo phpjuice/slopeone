@@ -7,10 +7,12 @@ use RuntimeException;
 /**
  * Slope One Exception.
  *
- * @package    PHPJuice\Slopeone
  * @author     ElHaouari Mohammed <dzstormers@gmail.com>
- * @link       https://github.com/PHPJuice/slopeone
+ *
+ * @see       https://github.com/PHPJuice/slopeone
+ *
  * @license    MIT
  */
-class SlopeoneException extends RuntimeException {
+class SlopeoneException extends RuntimeException
+{
 }

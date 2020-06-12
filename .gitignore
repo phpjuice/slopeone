@@ -3,7 +3,6 @@
 
 ### Composer ###
 composer.phar
-composer.lock
 /vendor/
 
 # Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
@@ -54,4 +53,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
+.phpintel/
 # End of https://www.gitignore.io/api/linux,windows,composer,visualstudiocode
+
+.env
+.phpunit.result.cache
+.php_cs.cache
