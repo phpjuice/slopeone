@@ -1,12 +1,12 @@
 # Slopeone
 
+![PHP Composer](https://github.com/phpjuice/slopeone/workflows/PHP%20Composer/badge.svg)
+[![Build Status](https://travis-ci.com/phpjuice/slopeone.svg?branch=master)](https://travis-ci.com/phpjuice/slopeone)
+[![Total Downloads](https://poser.pugx.org/phpjuice/slopeone/downloads)](https://packagist.org/packages/phpjuice/slopeone)
+
 PHP implementation of the Weighted Slope One rating-based collaborative filtering scheme.
 
-[![Latest Stable Version](https://poser.pugx.org/phpjuice/slopeone/v/stable)](https://github.com/PHPJuice/slopeone/releases/latest)
-[![Total Downloads](https://poser.pugx.org/phpjuice/slopeone/downloads)](https://packagist.org/packages/phpjuice/slopeone)
-[![Build Status](https://travis-ci.org/PHPJuice/slopeone.svg?branch=master)](https://travis-ci.org/PHPJuice/slopeone)
-[![GitHub issues](https://img.shields.io/github/issues/PHPJuice/slopeone.svg)](https://github.com/PHPJuice/slopeone/issues)
-[![License](https://poser.pugx.org/phpjuice/slopeone/license)](https://github.com/PHPJuice/slopeone/blob/master/LICENSE)
+
 
 ## Requirements
 
@@ -126,3 +126,8 @@ See also the list of [contributors](https://gitlab.com/opencf/opencf/graphs/mast
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details
+
+
+![PHP Composer](https://github.com/phpjuice/slopeone/workflows/PHP%20Composer/badge.svg)
+[![Build Status](https://travis-ci.com/phpjuice/slopeone.svg?branch=master)](https://travis-ci.com/phpjuice/slopeone)
+[![Total Downloads](https://poser.pugx.org/phpjuice/slopeone/downloads)](https://packagist.org/packages/phpjuice/slopeone)
