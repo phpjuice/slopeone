@@ -2,50 +2,37 @@
 
 namespace PHPJuice\Slopeone;
 
-/**
- * Slope One collaborative filtering for rated resources.
- *
- * @author     ElHaouari Mohammed <dzstormers@gmail.com>
- *
- * @see       https://github.com/PHPJuice/slopeone
- *
- * @license    MIT
- */
-class Algorithm implements \PHPJuice\Slopeone\Contracts\Slopeone
+use PHPJuice\Slopeone\Contracts\Slopeone;
+
+class Algorithm implements Slopeone
 {
     /**
-     * $diffs Differential ratings matrix.
+     * Differential rating matrix.
      *
      * @var array
      */
-    protected $diffs;
+    protected array $diffs;
 
     /**
-     * $freqs Ratings count matrix.
-     *
+     * Ratings count matrix.
      * @var array
      */
-    protected $freqs;
+    protected array $freqs;
 
-    /**
-     * Reset the instance.
-     */
-    public function clear()
+    /** @inheritDoc */
+    public function clear(): Algorithm
     {
-        $this->diffs = null;
-        $this->freqs = null;
+        $this->diffs = [];
+        $this->freqs = [];
+
+        return $this;
     }
 
-    /**
-     * Update matrices with user preference data, accepts an Array.
-     *
-     * @param array $userPrefs user preference data
-     *
-     * @return Algorithm
-     */
-    public function update($userData)
+
+    /** @inheritDoc */
+    public function update(array $data): Algorithm
     {
-        foreach ($userData as $ratings) {
+        foreach ($data as $ratings) {
             foreach ($ratings as $item1 => $rating1) {
                 isset($this->freqs[$item1]) || $this->freqs[$item1] = [];
                 isset($this->diffs[$item1]) || $this->diffs[$item1] = [];
@@ -59,30 +46,27 @@ class Algorithm implements \PHPJuice\Slopeone\Contracts\Slopeone
         }
         foreach ($this->diffs as $item1 => &$ratings) {
             foreach ($ratings as $item2 => $rating) {
-                $diff = ($ratings[$item2] / $this->freqs[$item1][$item2]);
+                $diff = ($rating / $this->freqs[$item1][$item2]);
                 $ratings[$item2] = round($diff, 2);
             }
         }
+
+        return $this;
     }
 
-    /**
-     * Recommend new items given known item ratings.
-     *
-     * @param array $userPrefs user preference data
-     *
-     * @return array predictions
-     */
-    public function predict($userPrefs)
+    /** @inheritDoc */
+    public function predict(array $preferences): array
     {
         $predictions = [];
         $freqs = [];
         $results = [];
-        foreach ($userPrefs as $item => $rating) {
+
+        foreach ($preferences as $item => $rating) {
             foreach ($this->diffs as $diffItem => $diffRatings) {
                 if (
-          isset($this->freqs[$diffItem]) &&
-          isset($this->freqs[$diffItem][$item])
-        ) {
+                    isset($this->freqs[$diffItem]) &&
+                    isset($this->freqs[$diffItem][$item])
+                ) {
                     $freq = $this->freqs[$diffItem][$item];
                     isset($predictions[$diffItem]) || $predictions[$diffItem] = 0.0;
                     isset($freqs[$diffItem]) || $freqs[$diffItem] = 0;
@@ -91,8 +75,9 @@ class Algorithm implements \PHPJuice\Slopeone\Contracts\Slopeone
                 }
             }
         }
+
         foreach ($predictions as $item => $value) {
-            if (!isset($userPrefs[$item]) && $freqs[$item] > 0) {
+            if (!isset($preferences[$item]) && $freqs[$item] > 0) {
                 $results[$item] = round($value / $freqs[$item], 2);
             }
         }
@@ -100,7 +85,8 @@ class Algorithm implements \PHPJuice\Slopeone\Contracts\Slopeone
         return $results;
     }
 
-    public function getModel()
+    /** @inheritDoc */
+    public function getModel(): array
     {
         return $this->diffs;
     }

@@ -2,15 +2,8 @@
 
 namespace PHPJuice\Slopeone\Contracts;
 
-/**
- * Slope One Interface.
- *
- * @author     ElHaouari Mohammed <dzstormers@gmail.com>
- *
- * @see       https://github.com/PHPJuice/slopeone
- *
- * @license    MIT
- */
+use PHPJuice\Slopeone\Algorithm;
+
 interface Slopeone
 {
     /**
@@ -21,23 +14,23 @@ interface Slopeone
     /**
      * Update matrices with user preference data, accepts an Array.
      *
-     * @param array $userPrefs user preference data
+     * @param  array  $data  user preference data
      */
-    public function update($userPrefs);
+    public function update(array $data): Algorithm;
 
     /**
      * Recommend new items given known item ratings.
      *
-     * @param array $userPrefs user preference data
+     * @param  array  $preferences  user preference data
      *
-     * @return array predictions
+     * @return array
      */
-    public function predict($userPrefs);
+    public function predict(array $preferences): array;
 
     /**
      * Gets the computed model.
      *
      * @return array model
      */
-    public function getModel();
+    public function getModel(): array;
 }
