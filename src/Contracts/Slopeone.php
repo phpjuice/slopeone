@@ -9,7 +9,7 @@ interface Slopeone
     /**
      * Reset the instance.
      */
-    public function clear();
+    public function clear(): Algorithm;
 
     /**
      * Update matrices with user preference data, accepts an Array.

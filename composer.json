@@ -21,7 +21,7 @@
         "source": "https://github.com/phpjuice/slopeone"
     },
     "require": {
-        "php": "^7.4|^8.0"
+        "php": "^7.4|^8.0|^8.1"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.4",
@@ -39,8 +39,8 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/pest",
-        "analyse": "phpstan analyse src tests",
+        "test": "vendor/bin/pest --colors=always",
+        "analyse": "phpstan analyse --ansi --debug",
         "php-cs-fixer": [
             "php-cs-fixer fix src --rules=@PSR2",
             "php-cs-fixer fix tests --rules=@PSR2"
