@@ -1,6 +1,7 @@
 # Slopeone
 
 ![Tests](https://github.com/phpjuice/slopeone/workflows/Tests/badge.svg?branch=main)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4b362481ae8a8cf39936/maintainability)](https://codeclimate.com/github/phpjuice/slopeone/maintainability)
 [![Latest Stable Version](http://poser.pugx.org/phpjuice/slopeone/v)](https://packagist.org/packages/phpjuice/slopeone)
 [![Total Downloads](http://poser.pugx.org/phpjuice/slopeone/downloads)](https://packagist.org/packages/phpjuice/slopeone)
 [![License](http://poser.pugx.org/phpjuice/slopeone/license)](https://packagist.org/packages/phpjuice/slopeone)
@@ -93,7 +94,7 @@ this should produce the following results
 you can easily run tests using composer
 
 ```bash
-$ composer test
+composer test
 ```
 
 ## Built With
@@ -129,6 +130,7 @@ the [tags on this repository](https://github.com/PHPJuice/slopeone/tags).
 license. Please see the [Licence](https://github.com/phpjuice/slopeone/blob/main/LICENSE) for more information.
 
 ![Tests](https://github.com/phpjuice/slopeone/workflows/Tests/badge.svg?branch=main)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4b362481ae8a8cf39936/maintainability)](https://codeclimate.com/github/phpjuice/slopeone/maintainability)
 [![Latest Stable Version](http://poser.pugx.org/phpjuice/slopeone/v)](https://packagist.org/packages/phpjuice/slopeone)
 [![Total Downloads](http://poser.pugx.org/phpjuice/slopeone/downloads)](https://packagist.org/packages/phpjuice/slopeone)
 [![License](http://poser.pugx.org/phpjuice/slopeone/license)](https://packagist.org/packages/phpjuice/slopeone)
